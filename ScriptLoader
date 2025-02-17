@@ -52,13 +52,13 @@ local function createButton(button, position, text, backgroundColor, textColor)
 end
 
 CopyKeyButton.Parent = Frame
-createButton(CopyKeyButton, UDim2.new(0.5, -315, 0.45, 0), "Copy Key URL", Color3.fromRGB(139, 0, 0), Color3.fromRGB(255, 255, 255))
+createButton(CopyKeyButton, UDim2.new(0.5, -315, 0.45, 0), "Get Key", Color3.fromRGB(139, 0, 0), Color3.fromRGB(255, 255, 255))
 
 CopyDiscordButton.Parent = Frame
 createButton(CopyDiscordButton, UDim2.new(0.5, -315, 0.65, 0), "Join Discord", Color3.fromRGB(0, 0, 139), Color3.fromRGB(255, 255, 255))
 
 ExecuteButton.Parent = Frame
-createButton(ExecuteButton, UDim2.new(0.5, -315, 0.85, 0), "Enter Key", Color3.fromRGB(255, 140, 0), Color3.fromRGB(255, 255, 255))
+createButton(ExecuteButton, UDim2.new(0.5, -315, 0.85, 0), "Submit Key", Color3.fromRGB(255, 140, 0), Color3.fromRGB(255, 255, 255))
 
 -- Trash Can Button (top-right) using UI elements
 TrashButton.Parent = Frame
