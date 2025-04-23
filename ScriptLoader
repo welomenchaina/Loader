@@ -80,7 +80,7 @@ end
 
 -- Get Key
 getKeyBtn.MouseButton1Click:Connect(function()
-	setclipboard("https://ads.luarmor.net/get_key?for=Desire_Hub-AQXeIDsbXKIn")
+	setclipboard("https://linkunlocker.com/unlock-desire-hubs-key-oOTc7")
 	notify("Copied Key Link!")
 end)
 
