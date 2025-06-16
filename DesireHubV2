@@ -1,6 +1,5 @@
 local HttpService = game:GetService("HttpService")
 
-
 local gui = Instance.new("ScreenGui", game.CoreGui)
 gui.Name = "DesireHubKeyGUI"
 
@@ -11,102 +10,6 @@ frame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 frame.Active = true
 frame.Draggable = true
 Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 12)
-
-
-local title = Instance.new("TextLabel", frame)
-title.Size = UDim2.new(1, 0, 0, 40)
-title.Position = UDim2.new(0, 0, 0, 0)
-title.BackgroundTransparency = 1
-title.Text = "Desire Hub"
-title.Font = Enum.Font.GothamBlack
-title.TextSize = 26
-title.TextColor3 = Color3.fromRGB(0, 170, 255)
-
-
-local keyBox = Instance.new("TextBox", frame)
-keyBox.Size = UDim2.new(0.9, 0, 0, 35)
-keyBox.Position = UDim2.new(0.05, 0, 0.25, 0)
-keyBox.PlaceholderText = "Enter Your Key"
-keyBox.Text = ""
-keyBox.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-keyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-keyBox.Font = Enum.Font.Gotham
-keyBox.TextSize = 16
-Instance.new("UICorner", keyBox).CornerRadius = UDim.new(0, 8)
-
-
-local injectBtn = Instance.new("TextButton", frame)
-injectBtn.Text = "Inject Key"
-injectBtn.Size = UDim2.new(0.9, 0, 0, 35)
-injectBtn.Position = UDim2.new(0.05, 0, 0.45, 0)
-injectBtn.BackgroundColor3 = Color3.fromRGB(220, 20, 60)
-injectBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-injectBtn.Font = Enum.Font.GothamBold
-injectBtn.TextSize = 16
-Instance.new("UICorner", injectBtn).CornerRadius = UDim.new(0, 8)
-
-
-local getKeyBtn = Instance.new("TextButton", frame)
-getKeyBtn.Text = "Get Key"
-getKeyBtn.Size = UDim2.new(0.9, 0, 0, 35)
-getKeyBtn.Position = UDim2.new(0.05, 0, 0.65, 0)
-getKeyBtn.BackgroundColor3 = Color3.fromRGB(30, 144, 255)
-getKeyBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-getKeyBtn.Font = Enum.Font.GothamBold
-getKeyBtn.TextSize = 16
-Instance.new("UICorner", getKeyBtn).CornerRadius = UDim.new(0, 8)
-
-
-local closeBtn = Instance.new("TextButton", frame)
-closeBtn.Text = "🗑️"
-closeBtn.Size = UDim2.new(0, 30, 0, 30)
-closeBtn.Position = UDim2.new(1, -35, 0, 5)
-closeBtn.BackgroundColor3 = Color3.fromRGB(0, 191, 255)
-closeBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
-closeBtn.Font = Enum.Font.GothamBold
-closeBtn.TextSize = 20
-Instance.new("UICorner", closeBtn).CornerRadius = UDim.new(0, 6)
-
-
-local function notify(msg)
-	pcall(function()
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "Desire Hub",
-			Text = msg,
-			Duration = 3
-		})
-	end)
-end
-
-
-getKeyBtn.MouseButton1Click:Connect(function()
-	setclipboard("https://linkunlocker.com/unlock-desire-hubs-key-oOTc7")
-	notify("Copied Key Link!")
-end)
-
-
-injectBtn.MouseButton1Click:Connect(function()
-	local key = keyBox.Text
-	if key == "" then
-		return notify("Enter your key first.")
-	end
-
-	local success, err = pcall(function()
-		getgenv().script_key = key
-		local HttpService = game:GetService("HttpService")
-
-
-local gui = Instance.new("ScreenGui", game.CoreGui)
-gui.Name = "DesireHubKeyGUI"
-
-local frame = Instance.new("Frame", gui)
-frame.Size = UDim2.new(0, 350, 0, 240)
-frame.Position = UDim2.new(0.5, -175, 0.5, -120)
-frame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-frame.Active = true
-frame.Draggable = true
-Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 12)
-
 
 local title = Instance.new("TextLabel", frame)
 title.Size = UDim2.new(1, 0, 0, 40)
@@ -117,7 +20,6 @@ title.Font = Enum.Font.GothamBlack
 title.TextSize = 26
 title.TextColor3 = Color3.fromRGB(0, 170, 255)
 
-
 local keyBox = Instance.new("TextBox", frame)
 keyBox.Size = UDim2.new(0.9, 0, 0, 35)
 keyBox.Position = UDim2.new(0.05, 0, 0.25, 0)
@@ -129,7 +31,6 @@ keyBox.Font = Enum.Font.Gotham
 keyBox.TextSize = 16
 Instance.new("UICorner", keyBox).CornerRadius = UDim.new(0, 8)
 
-
 local injectBtn = Instance.new("TextButton", frame)
 injectBtn.Text = "Inject Key"
 injectBtn.Size = UDim2.new(0.9, 0, 0, 35)
@@ -139,7 +40,6 @@ injectBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 injectBtn.Font = Enum.Font.GothamBold
 injectBtn.TextSize = 16
 Instance.new("UICorner", injectBtn).CornerRadius = UDim.new(0, 8)
-
 
 local getKeyBtn = Instance.new("TextButton", frame)
 getKeyBtn.Text = "Get Key"
@@ -151,7 +51,6 @@ getKeyBtn.Font = Enum.Font.GothamBold
 getKeyBtn.TextSize = 16
 Instance.new("UICorner", getKeyBtn).CornerRadius = UDim.new(0, 8)
 
-
 local closeBtn = Instance.new("TextButton", frame)
 closeBtn.Text = "🗑️"
 closeBtn.Size = UDim2.new(0, 30, 0, 30)
@@ -162,23 +61,20 @@ closeBtn.Font = Enum.Font.GothamBold
 closeBtn.TextSize = 20
 Instance.new("UICorner", closeBtn).CornerRadius = UDim.new(0, 6)
 
-
 local function notify(msg)
 	pcall(function()
 		game.StarterGui:SetCore("SendNotification", {
-			Title = "Desire Hub",
+			Title = "Desire Hub V2",
 			Text = msg,
 			Duration = 3
 		})
 	end)
 end
 
-
 getKeyBtn.MouseButton1Click:Connect(function()
 	setclipboard("https://linkunlocker.com/unlock-desire-hubs-key-oOTc7")
 	notify("Copied Key Link!")
 end)
-
 
 injectBtn.MouseButton1Click:Connect(function()
 	local key = keyBox.Text
@@ -188,7 +84,7 @@ injectBtn.MouseButton1Click:Connect(function()
 
 	local success, err = pcall(function()
 		getgenv().script_key = key
-		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/8698e0da16b06f8d494f6fb5cff5385c.lua"))()
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c13fbd9aea90ed846bca2f5d6e4b9da2.lua"))()
 	end)
 
 	if success then
@@ -198,20 +94,6 @@ injectBtn.MouseButton1Click:Connect(function()
 	end
 end)
 
-
-closeBtn.MouseButton1Click:Connect(function()
-	gui:Destroy()
-end)
-	end)
-
-	if success then
-		gui:Destroy()
-	else
-		notify("Invalid Key or Loader Error")
-	end
-end)
-
--- Close GUI
 closeBtn.MouseButton1Click:Connect(function()
 	gui:Destroy()
 end)
